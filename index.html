@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>HTML5 Video Demo</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"></head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/7a373d5b53.js"></script>
+	<link rel="stylesheet" href="style.css">
+	
+</head>
+<body>
+	<div id="video-container">
+		<!-- Video -->
+		<video id="video" width="640" height="365">
+		  <source src="videos/mikethefrog.webm" type="video/webm">
+		  <source src="videos/mikethefrog.ogv" type="video/ogv">
+		  <source src="videos/mikethefrog.mp4" type="video/mp4">
+		  <p>
+		    Your browser doesn't support HTML5 video.
+		    <a href="videos/mikethefrog.mp4">Download</a> the video instead.
+		  </p>
+		</video>
+		<!-- Video Controls -->
+		<div id="video-controls">
+			<!--<button type="button" id="play" class="far fa-play-circle"></button>-->
+			<button type="button" id="play" class="far fa-play-circle button"></button>
+			<button type="button" id="pause" class="far fa-pause-circle" disabled></button>
+			<button type="button" id="volume-plus" class="fa fa-plus"></button>
+			<button type="button" id="volume-minus" class="fa fa-minus"></button>
+			<button type="button" id="video-reload" class="fa fa-refresh"></button>
+			<button type="button" id="mute" class="far fa-volume-mute"></button>
+			<div class="progress">
+				<div class="progress-bar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="seek-bar"></div>
+			</div>
+			<!--<input type="range" id="seek-bar" value="0">-->
+			<!--<input type="range" id="seek-bar" value="0">-->
+
+			
+			
+		</div>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>
