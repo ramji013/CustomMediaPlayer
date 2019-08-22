@@ -26,7 +26,7 @@
 		linear,
 		left bottom,
 		left top,
-		color-stop(0.13, rgb(15, 184, 161)),
+		color-stop(0.13, rgb(189, 163, 109)),
 		color-stop(1, rgb(15, 184, 161) )
 	);
 }
@@ -41,13 +41,66 @@ button:hover {
 }
 
 body {
+  margin: 0;
+  padding: 0;
+  display:flex;
+  background:rgb(43, 41, 43);
+  min-height:100vh;
+  background-size:cover;
+  align-items: center;
+  justify-content: center;
+}
+
+.green{
+	background-color: forestgreen
+}
+
+.red{
+	background-color: red;
+}
+
+.button-trans{
 	margin: 0;
 	padding: 0;
-	display:flex;
-	background:#7A419B;
-	min-height:100vh;
-	background: linear-gradient(135deg, #9796f1 0%,#b9b9eb 22%, #e6aeae 78%,#ee6a6a 100%);
-	background-size:cover;
-	align-items: center;
-	justify-content: center;
-  }
+	
+}
+
+
+#video_player {
+	display: table;
+	line-height: 0;
+	font-size: 0;
+	background: #000;
+}
+#video_player video,
+	#video_player figcaption {
+		display: table-cell;
+		vertical-align: top;
+}
+#video_player figcaption {
+	width: 25%;
+}
+#video_player figcaption a {
+	display: block;
+	opacity: .5;
+	transition: 1s opacity;
+}
+#video_player figcaption a img,
+	figure video {
+		width: 100%;
+		height: auto;		
+}
+#video_player figcaption a:hover {
+	opacity: 1;
+}
+
+@media (max-width: 700px) {
+	#video_player video,
+		#video_player figcaption {
+			display: table-row;
+		}
+#video_player figcaption a {
+	display: inline-block;
+	width: 50.33%;
+}
+}
